@@ -1,19 +1,19 @@
--- Payment Method Analysis
--- Revenue breakdown and distribution by payment type
--- Fintech focus: Understanding payment preferences
+-- Geographic Performance Analysis
+-- Top 10 customer states by revenue
 -- Author: Monika Kwiatkowska 
 -- Date: February 2026
 
 SELECT 
-    payment_method,
+    customer_state,
+    COUNT(DISTINCT customer_id) as num_customers,
     COUNT(*) as num_orders,
     ROUND(SUM(total_payment), 2) as total_revenue,
-    ROUND(AVG(total_payment), 2) as avg_order_value,
-    ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM orders), 2) as pct_of_orders
+    ROUND(AVG(total_payment), 2) as avg_order_value
 FROM orders
-GROUP BY payment_method
-ORDER BY total_revenue DESC;
+GROUP BY customer_state
+ORDER BY total_revenue DESC
+LIMIT 10;
 
--- Key Insight: Credit card dominates payment methods
--- Business Impact: Optimize payment page for most popular methods
--- Fintech Application: Payment method preferences inform checkout design
+-- Key Insight: Revenue concentrated in top states
+-- Business Impact: Focus marketing spend on high-performing regions
+-- Growth Opportunity: Expand in underserved geographic markets
