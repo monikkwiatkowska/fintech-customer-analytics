@@ -23,11 +23,11 @@ This project analyzes customer behavior and payment patterns in Brazilian e-comm
 
 ## Business Questions
 
-1. **Who are our most valuable customers?** → Customer Lifetime Value analysis
-2. **How can we segment customers effectively?** → RFM segmentation
-3. **Why are customers churning?** → Churn analysis
-4. **What payment patterns exist?** → Fintech payment behavior analysis
-5. **Can we predict payment method preferences?** → Logistic regression model
+1. **Who are our most valuable customers?** - Customer Lifetime Value analysis
+2. **How can we segment customers effectively?** - RFM segmentation
+3. **Why are customers churning?** - Churn analysis
+4. **What payment patterns exist?** - Fintech payment behavior analysis
+5. **Can we predict payment method preferences?** - Logistic regression model
 
 ---
 
